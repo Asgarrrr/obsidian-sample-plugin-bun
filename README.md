@@ -19,12 +19,13 @@ Quick starting guide for new plugin devs:
 - Check if [someone already developed a plugin for what you want](https://obsidian.md/plugins)! There might be an existing plugin similar enough that you can partner up with.
 - Make a copy of this repo as a template with the "Use this template" button (login to GitHub if you don't see it).
 - Clone your repo to a local development folder. For convenience, you can place this folder in your `.obsidian/plugins/your-plugin-name` folder.
-- Install NodeJS, then run `npm i` in the command line under your repo folder.
-- Run `npm run dev` to compile your plugin from `main.ts` to `main.js`.
+- This project uses [Bun](https://bun.sh/) instead of Node.js for improved performance. Install Bun, then run `bun install` in the command line under your repo folder.
+- This project includes [Fevol's obsidian-typings](https://github.com/Fevol/obsidian-typings) which provides TypeScript typings for undocumented Obsidian API methods and variables, with additional descriptions and examples. Note that this currently covers only a subset of the full API, primarily the App interface and its sub-interfaces.
+- Run `bun run dev` to compile your plugin from `main.ts` to `main.js`.
 - Make changes to `main.ts` (or create new `.ts` files). Those changes should be automatically compiled into `main.js`.
 - Reload Obsidian to load the new version of your plugin.
 - Enable plugin in settings window.
-- For updates to the Obsidian API run `npm update` in the command line under your repo folder.
+- For updates to the Obsidian API run `bun update` in the command line under your repo folder.
 
 ## Releasing new releases
 

@@ -18,7 +18,7 @@
       "ES7",
       "ESNext"
     ],
-    "types": ["bun-types"],
+    "types": ["bun-types", "obsidian-typings"],
     "paths": {
       "@/*": ["./src/*"]
     },
