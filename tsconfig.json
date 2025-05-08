@@ -15,10 +15,19 @@
       "DOM",
       "ES5",
       "ES6",
-      "ES7"
-    ]
+      "ES7",
+      "ESNext"
+    ],
+    "types": ["bun-types"],
+    "paths": {
+      "@/*": ["./src/*"]
+    },
   },
   "include": [
     "**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
   ]
 }
