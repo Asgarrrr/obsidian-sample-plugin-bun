@@ -35,7 +35,7 @@ Quick starting guide for new plugin devs:
 - Upload the files `manifest.json`, `main.js`, `styles.css` as binary attachments. Note: The manifest.json file must be in two places, first the root path of your repository and also in the release.
 - Publish the release.
 
-> You can simplify the version bump process by running `npm version patch`, `npm version minor` or `npm version major` after updating `minAppVersion` manually in `manifest.json`.
+> You can simplify the version bump process by running `bun version patch`, `bun version minor` or `bun version major` after updating `minAppVersion` manually in `manifest.json`.
 > The command will bump version in `manifest.json` and `package.json`, and add the entry for the new version to `versions.json`
 
 ## Adding your plugin to the community plugin list
@@ -49,8 +49,8 @@ Quick starting guide for new plugin devs:
 
 - Clone this repo.
 - Make sure your NodeJS is at least v16 (`node --version`).
-- `npm i` or `yarn` to install dependencies.
-- `npm run dev` to start compilation in watch mode.
+- `bun i` to install dependencies.
+- `bun run dev` to start compilation in watch mode.
 
 ## Manually installing the plugin
 
@@ -59,7 +59,7 @@ Quick starting guide for new plugin devs:
 ## Improve code quality with eslint (optional)
 - [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code. 
 - To use eslint with this project, make sure to install eslint from terminal:
-  - `npm install -g eslint`
+  - `bun install -g eslint`
 - To use eslint to analyze this project use this command:
   - `eslint main.ts`
   - eslint will then create a report with suggestions for code improvement by file and line number.
