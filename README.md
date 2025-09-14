@@ -48,7 +48,7 @@ Quick starting guide for new plugin devs:
 ## How to use
 
 - Clone this repo.
-- Make sure your NodeJS is at least v16 (`node --version`).
+- Make sure you have [Bun](https://bun.sh/) installed (`bun --version`).
 - `bun i` to install dependencies.
 - `bun run dev` to start compilation in watch mode.
 
