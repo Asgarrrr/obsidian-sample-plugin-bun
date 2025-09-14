@@ -2,7 +2,7 @@
 	"name": "obsidian-sample-plugin-bun",
 	"version": "1.0.0",
 	"description": "This is a sample plugin for Obsidian (https://obsidian.md) with bun support.",
-	"main": "main.js",
+	"main": "src/main.ts",
 	"scripts": {
 		"dev": "bun esbuild.config.mjs",
 		"build": "bun esbuild.config.mjs production",
