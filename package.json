@@ -18,8 +18,9 @@
 		"dev": "bun bun.build.ts",
 		"build": "bun bun.build.ts production",
 		"version": "bun version-bump.mjs && git add manifest.json versions.json",
-		"lint": "bunx eslint src/",
-		"lint:fix": "bunx eslint src/ --fix",
+		"lint": "bunx biome lint src/",
+		"lint:fix": "bunx biome lint --write src/",
+		"format": "bunx biome format --write src/",
 		"type-check": "bunx tsc --noEmit",
 		"clean": "bun rm -rf main.js *.tsbuildinfo"
 	}

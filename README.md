@@ -1,6 +1,6 @@
-# Obsidian Sample Plugin
+# Obsidian Sample Plugin (Bun Edition)
 
-This is a sample plugin for Obsidian (https://obsidian.md).
+This is a sample plugin for Obsidian (https://obsidian.md) with enhanced tooling and performance optimizations.
 
 This project uses TypeScript to provide type checking and documentation.
 The repo depends on the latest plugin API (obsidian.d.ts) in TypeScript Definition format, which contains TSDoc comments describing what it does.
@@ -11,6 +11,31 @@ This sample plugin demonstrates some of the basic functionality the plugin API c
 - Adds a plugin setting tab to the settings page.
 - Registers a global click event and output 'click' to the console.
 - Registers a global interval which logs 'setInterval' to the console.
+
+## Enhanced Features & Tooling
+
+This template diverges from the official Obsidian sample plugin with several improvements while maintaining full compatibility with Obsidian's plugin guidelines:
+
+### **Bun Runtime & Bundler**
+- **Replaced**: `esbuild.config.mjs` → `bun.build.ts`
+- **Performance**: Faster builds and installs compared to Node.js/npm
+- **Native TypeScript**: Direct `.ts` execution without transpilation step
+- **Built-in bundler**: No external dependencies for building
+- **Watch mode**: Automatic rebuilds with file change detection
+
+### **Biome Code Quality**
+- **Replaced**: ESLint + Prettier → Biome
+- **Performance**: Significantly faster linting and formatting
+- **Unified tooling**: Single tool for linting, formatting, and imports sorting
+- **Consistent rules**: Pre-configured with strict quality standards
+- **Same standards**: Follows the same code quality guidelines as the official template
+
+### **Benefits**
+- **Faster development**: Quick builds and hot reloading
+- **Better DX**: Modern tooling with excellent TypeScript support
+- **Smaller footprint**: Fewer dependencies and faster installs
+- **Same compatibility**: 100% compatible with Obsidian's plugin system
+- **Consistent code**: Automated formatting and linting
 
 ## First time developing plugins?
 
@@ -56,15 +81,16 @@ Quick starting guide for new plugin devs:
 
 - Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
 
-## Improve code quality with eslint (optional)
-- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code. 
-- To use eslint with this project, make sure to install eslint from terminal:
-  - `bun install -g eslint`
-- To use eslint to analyze this project use this command:
-  - `eslint main.ts`
-  - eslint will then create a report with suggestions for code improvement by file and line number.
-- If your source code is in a folder, such as `src`, you can use eslint with this command to analyze all files in that folder:
-  - `eslint ./src/`
+## Code Quality with Biome
+
+This project uses [Biome](https://biomejs.dev/) for fast linting and formatting:
+
+- **Lint your code**: `bun run lint` - Analyze code for issues and style problems
+- **Fix automatically**: `bun run lint:fix` - Auto-fix linting and formatting issues
+- **Format code**: `bun run format` - Format all TypeScript files
+- **Type checking**: `bun run type-check` - Verify TypeScript types
+
+Biome provides the same code quality standards as ESLint + Prettier but with significantly better performance and zero configuration.
 
 ## Funding URL
 
